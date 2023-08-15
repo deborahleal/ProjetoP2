@@ -1,0 +1,52 @@
+Capitulo
+NOME:
+escolhas
+TEXTO:
+O ano era 2015...era aniversario de MARCOS, que acabara de chegar da escola, quando dá de encontro com sua mãe que tem projetos para sua vida futebol ou estudar. O futebol é um sonho para MARCOS, mas sua mae esta muito indecisa. Pois, ela prefere estabilidade. MARCOS, tem um tabelnto nato, ama vida do futebol exige muito para uma vida focada e com isso continua a jogar bem, porém o vestibular esta chegando e ele precisa tomar decisão, estudar muito e passar na faculdade ou focar no treino. Ele, ao perceber essa situação tem duas opções em sua frente ESTUDAR ou FUTEBOL. A opção que MARCOS ira escolher
+PERSONAGEM:
+MARCOS
+VARIAÇÃO DE FELICIDADE: 
+100
+
+CAPITULO 
+NOME: 
+Estudos
+TEXTO:
+Marcos preferiu estudar, consequentemente, ele tem uma vida normal e vive send um empreendedor na área de tecnologia. Marcos, tem muitoss projetos para sua empresa e decidiu lançar o novo carro eletrico. Durante sua vida toda apesar de encontrar felicidade nesse caminho ele imagina com o sonho de criança a vida de jogador. Em sua cabeça so havia pensamentos de como teria acontecido isso, SUA VIDA APROVEITADA COM SE TALENTO......
+PERSONAGEM:
+MARCOS 
+VARIAÇÃO DE FELICIDADE:
+-45
+
+CAPITULO
+NOME:
+O FUTEBOL
+TEXTO:
+Marcos escolhe o talento. La ele encontra um so caminho cheio de probelmas, mas ele consegue passar no Nautico. Entao ele se destaca a base e faz uma copa SP sub-20 incrivel tem dois caminhos distintos. Marcos percebe esta com duvidas e sua felicidade esta em 80% e não sabe o que vai acontecer com ele. Logo, ele tem que dar o destino de escolher uma das duas propostas , Nautico ou Japão \nDigite a porta que Marcos irá escolher
+PERSONAGEM:
+MARCOS
+VARIAÇÃO DE FELICIDADE: 
+80
+
+CAPITULO
+NOME:
+VIDA COMPLICADA
+TEXTO:
+Marcos escolhe o japão e não consegue se adaptar, então volta pro Nautico.
+PERSONAGEM:
+MARCOS
+VARIAÇÃO DE FELICIDADE:
+-20
+
+CAPITULO
+NOME:
+ídolo do Nautico
+TEXTO:
+Marcos continua no Nautico, e consegue se transformar em um idolo do time, sendo assim sua felicidade est aem 95, pois ainda pensa no que teria acontecido se tivesse ido pro japão
+PERSONAGEM:
+MARCOS
+VARIAÇÃO DE FELICIDADE:
+95
+
+
+
