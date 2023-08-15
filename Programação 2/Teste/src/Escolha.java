@@ -1,15 +1,11 @@
 public class Escolha {
-    private String texto;
-    private Capitulos proximo;
+    String texto;
+    Capitulo proximo; // ideia de arvores e listas ligadas 
 
-    public Escolha(String texto, Capitulos proximo)   {
+
+    Escolha(String texto, Capitulo proximo)
+    {
         this.texto = texto;
-        this.proximo = proximo;
-    }
-    public String getTexto(){
-        return this.texto;
-    }
-    public Capitulos getCapituloproximo(){
-        return this.proximo;
+        this.proximo = proximo; 
     }
 }

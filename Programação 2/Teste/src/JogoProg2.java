@@ -2,8 +2,9 @@ import java.util.Scanner;
 public class JogoProg2 {
     public static void main(String[] args) {
         System.out.println();
-        System.out.println(" UMA HISTÓRIA SOBRE DECISÕES");
+      
         System.out.println();
+        Scanner escaneador = new Scanner(System.in);
         Personagem adriano = new Personagem("Adriano", 100);
         Personagem jose = new Personagem ( "jose", 50);
 
@@ -11,87 +12,41 @@ public class JogoProg2 {
         //jose.alterarEnergia(-150);
 
         //Capitulo 1 
-        String nomeCapitulo1 = "A PRIMEIRA ESCOLHA";
-        String textoCapitulo1 = "Olá, me chamo Adriano; e estou aqui para lhe orientar nessa aventura." +
+        Capitulo capitulo1 = new Capitulo("A PRIMEIRA ESCOLHA", "Olá, me chamo Adriano; e estou aqui para lhe orientar nessa aventura." +
                                 " José está em uma floresta, e perto de tomar uma decisão, pois está em uma bifurcação," +
-                                " então escolha para onde quer seguir:  ";
-        //decisões CAP 1
-        String escolha1Capitulo1 = "direita";
-        String escolha2Capitulo1 = "esquerda";
+                                " então escolha para onde quer seguir:  ", jose, 0, escaneador);
+        
         //Capitulo 2
-        String nomeCapitulo2 = "UM FIM EMINENTE";
-        String textoCapitulo2 = "Ao escolher o lado direito, josé acorda no meio da noite em sua cama." +
+        Capitulo capitulo2 = new Capitulo("UM FIM EMINENTE","Ao escolher o lado direito, josé acorda no meio da noite em sua cama." +
                                 " E então passa a acreditar que tudo aquilo foi um sonho, fruto de sua imaginação, " +
-                                "que é constantemente alimentada por filmes de ficção cientifica. FIM";
+                                "que é constantemente alimentada por filmes de ficção cientifica. FIM", jose, -100, escaneador);
+        
         //CAP 3
-        String nomeCapitulo3 = " ENCONTRO DO TESOURO";
-        String textoCapitulo3 = "Após escolher o lado esquerdo, jose encontra um precipicio e deve escolher se: ";
-        //decisões CAP3
-        String escolha1Capitulo3 = " 1";
-        String escolha2Capitulo3 = " 2 ";
-         String escolha3Capitulo3 = " 3 ";
+        Capitulo capitulo3 = new Capitulo(" ENCONTRO DO TESOURO", "Após escolher o lado esquerdo, jose encontra um precipicio e deve escolher se: ", jose, 10, escaneador);
+       
         // CAP 4 
-         String nomeCapitulo4 = "MERCENARIOS";
-         String textoCapitulo4 = " jose encontra um grupo de mercenarios e é morto. FIM";
+        Capitulo capitulo4 = new Capitulo("MERCENARIOS", " jose encontra um grupo de mercenarios e é morto. FIM", jose, 20, escaneador);
+
         //CAP 5
-         String nomeCapitulo5 = " CAMINHO DO BEM";
-        String textoCapitulo5 = " jose percebeu que era alto, mas mesmo assim pulou;" +
-                                        "e encontrou um caminho que o levará para casa. FIM";
+        Capitulo capitulo5 = new Capitulo(" CAMINHO DO BEM", " jose percebeu que era alto, mas mesmo assim pulou;" +
+                                "e encontrou um caminho que o levará para casa. FIM", jose, 0, escaneador);
 
-        //CAP 6 
-        String nomeCapitulo6 = " DESISTENTE";
-        String textoCapitulo6 = " Por não pular, jose se mostra um covarde. FIM";
+
+           //ESCOLHAS
+           capitulo1.escolhas.add(new Escolha("direita", capitulo2));
+           capitulo1.escolhas.add(new Escolha("esquerda", capitulo3));
+           capitulo3.escolhas.add(new Escolha("1", capitulo4));
+           capitulo3.escolhas.add ( new Escolha("2", capitulo5));
+          //new String[]{"direita", "esquerda"}; //CAP 1 
+          //null; //CAP 2 
+         // new String [] {"1", "2"}; //CAP3
+          //null; // CAP4
+         // null; //CAP5
+
+        Capitulo raiz = capitulo1;
+        System.out.println(" UMA HISTÓRIA SOBRE DECISÕES");
         System.out.println( "\n . . . \n");
-        System.out.println(nomeCapitulo1);
-        System.out.println(textoCapitulo1);
-        System.out.println("-" + escolha1Capitulo1) ;
-        System.out.println("-" + escolha2Capitulo1 );
-
-        Scanner escaneador = new Scanner(System.in);
-        String escolha = escaneador.nextLine();
-
-        if ( escolha.equals(escolha1Capitulo1))
-        {
-            System.out.println("\n . . . \n");
-            System.out.println(nomeCapitulo2);
-            System.out.println(textoCapitulo2);
-            adriano.alterarEnergia(-100);
-        }
-        else if(escolha.equals(escolha2Capitulo1))
-        {
-
-            System.out.println("\n . . . \n");
-            System.out.println(nomeCapitulo3);
-            System.out.println(textoCapitulo3);
-            System.out.println("-" + escolha1Capitulo3) ;
-            System.out.println("-" + escolha2Capitulo3) ;
-            System.out.println("-" + escolha3Capitulo3) ;
-            escolha = escaneador.nextLine();
-            if(escolha.equalsIgnoreCase(escolha1Capitulo3))
-            {
-                    System.out.println("\n . . .\n") ;
-                    System.out.println(nomeCapitulo4) ;
-                    System.out.println(textoCapitulo4) ;
-
-
-            }
-            else if ( escolha.equals(escolha2Capitulo3))
-            {
-                
-                    System.out.println("\n . . . \n") ;
-                    System.out.println(nomeCapitulo5) ;
-                    System.out.println(textoCapitulo5) ;
-                    adriano.alterarEnergia(-15);
-            }
-            else if ( escolha.equals(escolha3Capitulo3))
-            {
-                
-
-                    System.out.println("\n  . . . \n" ) ;
-                    System.out.println(nomeCapitulo6) ;
-                    System.out.println(textoCapitulo6) ;
-            }
-
-        }
+        raiz.mostrar();
+        escaneador.close();
     }
 }
