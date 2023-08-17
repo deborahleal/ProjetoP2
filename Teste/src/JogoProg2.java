@@ -8,7 +8,7 @@ public class JogoProg2 {
         Scanner escaneador = new Scanner(System.in);
 
         LeitorCarregador leitor = new LeitorCarregador();
-         HashMap<String,Personagem> personagens = leitor.lerPersonagens("rsc/personagens.txt");
+          HashMap<String,Personagem> personagens = leitor.lerPersonagens("rsc/personagens.txt");
          HashMap<String, Capitulo> capitulos = leitor.lerCapitulos("rsc/capitulos.txt", 
                                                                     personagens, 
                                                                     escaneador);

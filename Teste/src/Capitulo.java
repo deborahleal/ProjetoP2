@@ -3,14 +3,14 @@ import java.util.Scanner;
 
 
 public class Capitulo {
-    String nome;
-    String texto;
-    ArrayList<Escolha>  escolhas; //objeto
-    Personagem personagem;
-    int alteraçãoEnergia;
-    Scanner escaneador;
+     private String nome;
+     private String texto;
+     private ArrayList<Escolha>  escolhas; //objeto
+     private  Personagem personagem;
+     private int alteraçãoEnergia;
+     private Scanner escaneador;
 
-    Capitulo( String nome, String texto,Personagem personagem,int alteraçãoEnergia, Scanner escaneador )
+    public Capitulo( String nome, String texto,Personagem personagem,int alteraçãoEnergia, Scanner escaneador )
             {
                 this.nome = nome;
                 this.texto = texto;
@@ -20,7 +20,7 @@ public class Capitulo {
                 this.escolhas = new ArrayList<Escolha> ();
             }
 
-            void mostrar () //ajuda no reuso do código
+            public void mostrar () //ajuda no reuso do código
             {
                 System.out.println( "\n . . . \n");
                 System.out.println(this.nome);
@@ -31,18 +31,18 @@ public class Capitulo {
                 {
                     for(Escolha escolha : escolhas)
                     {
-                        System.out.println("-" + escolha.texto);
+                        System.out.println("-" + escolha.getTexto());
                     }
                     System.out.println();
 
                      int idEscolha = escolher();
-                     this.escolhas.get(idEscolha).proximo.mostrar();
+                     this.escolhas.get(idEscolha).getProximo().mostrar();
                 }
                 
                 
                
             }
-            int escolher() {
+            private int escolher() {
                 int idEscolha = -1;
 
                 if ( escolhas != null ) {
@@ -53,7 +53,7 @@ public class Capitulo {
 
                         
                         for(int i = 0; i<escolhas.size();i++){
-                            if(escolhaDigitada.equals(escolhas.get(i).texto))
+                            if(escolhaDigitada.equals(escolhas.get(i).getTexto()))
                         {
                             idEscolha = i;
                         }
@@ -67,4 +67,10 @@ public class Capitulo {
                 }
                 return idEscolha;
             }
+
+            public void adicionarEscolha( Escolha escolha )
+            {
+                this.escolhas.add(escolha);
+            }
+
 }
