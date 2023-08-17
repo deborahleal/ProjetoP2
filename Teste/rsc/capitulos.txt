@@ -1,0 +1,85 @@
+CAPITULO
+NOME:
+A PRIMEIRA ESCOLHA
+TEXTO:
+Olá, me chamo Adriano; e estou aqui para lhe orientar nessa aventura. José está em uma floresta, e perto de tomar uma decisão, pois está em uma bifurcação, então escolha para onde quer seguir:
+PERSONAGEM:
+jose
+VARIAÇÃO DE ENERGIA:
+0
+
+
+CAPITULO
+NOME:
+UM FIM EMINENTE
+TEXTO:
+Ao escolher o lado direito, josé acorda no meio da noite em sua cama. E então passa a acreditar que tudo aquilo foi um sonho, fruto de sua imaginação, que é constantemente alimentada por filmes de ficção cientifica. FIM
+PERSONAGEM:
+jose
+VARIAÇÃO DE ENERGIA:
+-100
+
+CAPITULO
+NOME: 
+ENCONTRO DO TESOURO
+TEXTO:
+Após escolher o lado esquerdo, jose encontra um precipicio e deve escolher se:
+PERSONAGEM:
+jose
+VARIAÇÃO DE ENERGIA:
+10
+
+
+CAPITULO 
+NOME:
+MERCENARIOS
+TEXTO:
+jose encontra um grupo de mercenarios e é morto. FIM
+PERSONAGEM:
+jose
+VARIAÇÃO DE ENERGIA:
+20
+
+CAPITULO
+NOME: 
+CAMINHO DO BEM
+TEXTO:
+jose percebeu que era alto, mas mesmo assim pulou; e encontrou um caminho que o levará para casa. FIM
+PERSONAGEM:
+jose
+VARIAÇÃO DE ENERGIA:
+0
+       
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+A PRIMEIRA ESCOLHA
+TEXTO:
+direita
+CAPITULO DESTINO:
+UM FIM EMINENTE
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+A PRIMEIRA ESCOLHA
+TEXTO:
+esquerda
+CAPITULO DESTINO:
+ENCONTRO DO TESOURO
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+ENCONTRO DO TESOURO
+TEXTO:
+1
+CAPITULO DESTINO:
+MERCENARIOS
+
+
+ESCOLHA
+CAPITULO DE ORIGEM:
+ENCONTRO DO TESOURO
+TEXTO:
+2
+CAPITULO  DESTINO:
+CAMINHO DO BEM
