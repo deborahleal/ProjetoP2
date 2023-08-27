@@ -1,31 +1,48 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 
 public class Capitulo {
      private String nome;
      private String texto;
-     private ArrayList<Escolha>  escolhas; //objeto
+     protected ArrayList<Escolha>  escolhas; //objeto
      private  Personagem personagem;
-     private int alteraçãoEnergia;
+     private int variacaodeEnergia;
      private Scanner escaneador;
 
-    public Capitulo( String nome, String texto,Personagem personagem,int alteraçãoEnergia, Scanner escaneador )
+     protected Capitulo(){}
+
+
+    public Capitulo( String nome, 
+                    String texto,
+                    Personagem personagem,
+                    int variacaodeEnergia, 
+                    Scanner escaneador )
             {
                 this.nome = nome;
                 this.texto = texto;
                 this.personagem = personagem;
-                this.alteraçãoEnergia = alteraçãoEnergia;
+                this.variacaodeEnergia = variacaodeEnergia;
                 this.escaneador = escaneador;
-                this.escolhas = new ArrayList<Escolha> ();
+                this.escolhas = new ArrayList<Escolha> (); //tem que criar uma parte pra caixa magica
             }
+
+            public Capitulo(
+            HashMap<String, Personagem> personagens, 
+            Scanner escaneadorConsole,
+            Scanner escaneadorArquivoCapitulos) 
+            {
+                this.ler(personagens, escaneadorConsole, escaneadorArquivoCapitulos);
+                this.escolhas = new ArrayList<Escolha>();
+    }
 
             public void mostrar () //ajuda no reuso do código
             {
                 System.out.println( "\n . . . \n");
                 System.out.println(this.nome);
                 System.out.println(this.texto);
-                this.personagem.alterarEnergia(this.alteraçãoEnergia);
+                this.personagem.alterarEnergia(this.variacaodeEnergia);
 
                 if(this.escolhas.size() > 0)
                 {
@@ -67,10 +84,36 @@ public class Capitulo {
                 }
                 return idEscolha;
             }
+            protected void ler(HashMap<String, Personagem> personagens, 
+                             Scanner escaneadorConsole,
+                             Scanner escaneadorArquivoCapitulos) {
+                     
+                        
+                        String linhaEscaneada;
+
+                        this.escaneador = escaneadorConsole;
+                       
+                        linhaEscaneada = escaneadorArquivoCapitulos.nextLine(); // NOME
+                        this.nome = escaneadorArquivoCapitulos.nextLine(); 
+
+                        linhaEscaneada = escaneadorArquivoCapitulos.nextLine(); // texto
+                        this.texto = escaneadorArquivoCapitulos.nextLine();
+
+                        linhaEscaneada = escaneadorArquivoCapitulos.nextLine(); // personagem
+                        this.personagem = personagens.get(escaneadorArquivoCapitulos.nextLine());
+                        
+                        linhaEscaneada = escaneadorArquivoCapitulos.nextLine(); // variação de ENERGIA
+                        this.variacaodeEnergia = Integer.parseInt(escaneadorArquivoCapitulos.nextLine()); 
+                        
+                        }
 
             public void adicionarEscolha( Escolha escolha )
             {
                 this.escolhas.add(escolha);
+            }
+
+            public String getNome() {
+                return this.nome;
             }
 
 }
